@@ -1,4 +1,11 @@
+function simpyRange (beginning, end) { //for simps
+  const directionMultipler = beginning > end ? -1 : 1
+  const length = Math.abs(end - beginning + directionMultipler)
+  return Array.from({ length }, (_, index) => index * directionMultipler + beginning);
+}
+
 export const uniques = set => Array.from(new Set(set))
+
 
 export const selectIn = (field, things) => things.map(thing => thing[field])
 
