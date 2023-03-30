@@ -24,8 +24,8 @@ export const isPrime = (number) => {
 };
 
 export function* primes(number) {
-  let primesCount=0;
-  for (let i = 2; number <= primesCount; i++) {
+  let primesCount = 0;
+  for (let i = 2; primesCount < number; i++) {
     if (isPrime(i)) {
       ++primesCount;
       yield i;
@@ -33,8 +33,8 @@ export function* primes(number) {
   }
 }
 
-export function* nPowersOf(length ,number) {
+export function* nPowersOf(length, number) {
   for (let i = 1; i <= length; i++) {
-    yield number**i
+    yield number ** i;
   }
 }
