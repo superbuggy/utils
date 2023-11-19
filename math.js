@@ -38,3 +38,6 @@ export function* nPowersOf(length, number) {
     yield number ** i;
   }
 }
+
+export const mod = (number, base) => ((number % base) + base) % base;
+
